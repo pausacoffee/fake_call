@@ -1,0 +1,83 @@
+{
+  "@@locale": "kr",
+  
+  "app_title" : "오늘의 날씨",
+
+  "danger_low" : "낮음",
+  "danger_moderate" : "보통",
+  "danger_high" : "높음",
+  "danger_very_high" : "매우 높음",
+  "danger_extreme" : "위험",
+
+  "danger_msg_low" : "자외선 복사로 인한 위험이 적어요. 하지만 민감하신 분들은 꼭 자외선 차단제를 챙기세요.",
+  "danger_msg_moderate" : "자외선 차단제와 외투를 준비해 주세요.",
+  "danger_msg_high" : "태양에 오래 노출되면 위험해요! 자외선 차단제와 외투, 선글라스를 준비해 주세요.",
+  "danger_msg_very_high" : "강한 자외선에 피부가 빠르게 탈 수 있어요! 실내나 그늘에 머물러야 해요. 자외선 차단제와 외투 선글라스를 준비해 주세요.",
+  "danger_msg_extreme" : "수십분만 노출되어도 매우 위험해요! 자외선 차단제를 2시간마다 발라주세요.",  
+
+  "weather" : "날씨",
+  "rain" : "비",
+  "wind" : "바람",
+  "humidy" : "습도",
+
+  "allow_permission_plz":"권한을 허용해주세요.",
+  "allow_permission_for_app_plz": "접근 권한이 없어 해당 기능을 사용할 수 없습니다. @app_title을 원활하게 이용하기 위해서 권한을 허용해주세요.",
+  "required_permission":"허용이 필요한 항목",
+  "location_based":"위치 기반",
+  "allowed":"허용",
+  "not_allowed":"비허용",
+  
+  "guide_permission":"접근 권한 안내",
+  "guide_msg_permission":"APP 사용을 위해\n다음 접근권한을 사용하고 있습니다.",
+  "click_one_more_to_close":"한번 더 누르면 앱이 종료됩니다.",
+  
+  "setting":"세팅",
+  "favorite_location":"관심 지역",
+  "news":"뉴스",
+  "share_weather":"날씨 공유하기",
+
+  "error_occur":"에러 발생",
+  "error_404":"404 오류",
+  "error_page_msg":"유저분에게 불편을 드려 죄송합니다.\n 서버에서 요청하신 페이지를 찾을 수 없습니다.",
+
+  "confirm":"확인",
+  "cancle":"취소",
+
+  "loading":"로딩 중",
+  "search_location":"지역 검색",
+
+  "copyright_api":"데이터 권한 : Copyright © Weather API",
+  "copyright_msg":"이 자료는 인증받지 않은 자료로 표출방식에 따라 차이가 있을 수 있습니다.",
+
+  "temperate_scale":"기온 단위",
+
+  "uv_index":"자외선 지수",
+  "uv_current_index":"자외선 지수",
+
+  "direction_n": "북",
+  "direction_nne": "북북동",
+  "direction_ne":"북동",
+  "direction_ene":"동북동",
+  "direction_e":"동",
+  "direction_ese":"동남동",
+  "direction_se":"남동",
+  "direction_sse":"남남동",
+  "direction_s":"남",
+  "direction_ssw":"남남서",
+  "direction_sw":"남서",
+  "direction_wsw":"서남서",
+  "direction_w":"서",
+  "direction_wnw":"서북서",
+  "direction_nw":"북서",
+  "direction_nnw":"북북서",
+
+  "scale":"단위",
+  "arlarm":"알림",
+  "display":"디스플레이",
+  "review_app":"응원하기",
+  "version":"버전",
+  "improvements":"개선사항 보내기",
+  "share_app":"친구에게 앱 공유하기",
+
+  "end" : "끝"
+}

@@ -1,0 +1,83 @@
+{
+  "@@locale": "en",
+  
+  "app_title" : "Weather Today",
+
+  "danger_low" : "low",
+  "danger_moderate" : "moderate",
+  "danger_high" : "high",
+  "danger_very_high" : "very high",
+  "danger_extreme" : "extreme",  
+
+  "danger_msg_low" : "danger_msg_low",
+  "danger_msg_moderate" : "danger_msg_moderate",
+  "danger_msg_high" : "danger_msg_high",
+  "danger_msg_very_high" : "danger_msg_very_high",
+  "danger_msg_extreme" : "danger_msg_extreme",    
+
+  "weather" : "weather",
+  "rain" : "rain",
+  "wind" : "wind",
+  "humidy" : "humidy", 
+
+  "allow_permission_plz":"allow_permission_plz",
+  "allow_permission_for_app_plz": "allow_permission_for_app_plz",
+  "required_permission":"required_permission",
+  "location_based":"location_based",
+  "allowed":"allowed",
+  "not_allowed":"not_allowed",
+
+  "guide_permission":"guide_permission",
+  "guide_msg_permission":"guide_msg_permission",
+  "click_one_more_to_close":"click_one_more_to_close",  
+  
+  "setting":"setting",
+  "favorite_location":"favorite_location",
+  "news":"news",
+  "share_weather":"share_weather",  
+
+  "error_occur":"error_occur",
+  "error_404":"error_404",
+  "error_page_msg":"error_page_msg",   
+
+  "confirm":"confirm",
+  "cancle":"cancle",  
+
+  "loading":"loading",
+  "search_location":"search_location",
+
+  "copyright_api":"copyright_api",
+  "copyright_msg":"copyright_msg",
+
+  "temperate_scale":"temperate_scale",
+
+  "uv_index":"uv_index",
+  "uv_current_index":"uv_current_index",  
+
+  "direction_n": "direction_n",
+  "direction_nne": "direction_nne",
+  "direction_ne":"direction_ne",
+  "direction_ene":"direction_ene",
+  "direction_e":"direction_e",
+  "direction_ese":"direction_ese",
+  "direction_se":"direction_se",
+  "direction_sse":"direction_sse",
+  "direction_s":"direction_s",
+  "direction_ssw":"direction_ssw",
+  "direction_sw":"direction_sw",
+  "direction_wsw":"direction_wsw",
+  "direction_w":"direction_w",
+  "direction_wnw":"direction_wnw",
+  "direction_nw":"direction_nw",
+  "direction_nnw":"direction_nnw",
+
+  "scale":"scale",
+  "arlarm":"arlarm",
+  "display":"display",
+  "review_app":"review_app",
+  "version":"version",
+  "improvements":"improvements",
+  "share_app":"share_app",  
+
+  "end" : "끝"
+}
