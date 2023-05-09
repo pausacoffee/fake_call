@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'text.dart';
 
+//TODO: TextStylePath 말고 Theme 사용하기
+
 final darkTheme = ThemeData(
   colorScheme: darkColorScheme,
-  appBarTheme: appBarTheme,
+  //textTheme: darkTextScheme,
+  appBarTheme: darkAppBarTheme,
   primarySwatch: Colors.grey,
   primaryColor: Colors.black,
   brightness: Brightness.dark,
-  dividerColor: Colors.transparent,
+  dividerColor: Colors.white24,
   fontFamily: GoogleFonts.openSans().fontFamily,
   inputDecorationTheme: const InputDecorationTheme(
     border: OutlineInputBorder(
@@ -17,18 +21,18 @@ final darkTheme = ThemeData(
     ),
   ),
   dividerTheme: const DividerThemeData(
-    color: Colors.transparent, // 테두리 색상을 지정합니다.
-    thickness: 2.0, // 테두리 두께를 지정합니다.
+    color: Colors.white12, // 테두리 색상을 지정합니다.
+    thickness: 1.0, // 테두리 두께를 지정합니다.
   ),
 );
 
 final lightTheme = ThemeData(
   colorScheme: lightColorScheme,
-  appBarTheme: appBarTheme,
+  appBarTheme: lightAppBarTheme,
   primarySwatch: Colors.grey,
   primaryColor: Colors.white,
   brightness: Brightness.light,
-  dividerColor: Colors.transparent,
+  dividerColor: Colors.black26,
   fontFamily: GoogleFonts.openSans().fontFamily,
   inputDecorationTheme: const InputDecorationTheme(
     border: OutlineInputBorder(
@@ -36,43 +40,65 @@ final lightTheme = ThemeData(
     ),
   ),
   dividerTheme: const DividerThemeData(
-    color: Colors.transparent, // 테두리 색상을 지정합니다.
-    thickness: 2.0, // 테두리 두께를 지정합니다.
+    color: Colors.black26, // 테두리 색상을 지정합니다.
+    thickness: 1.0, // 테두리 두께를 지정합니다.
+    indent: 12, //divider의 시작점을 얼마나 띄울것인지
+    endIndent: 12, //divider의 끝점을 얼마나 띄울것인지
   ),
 );
 
+//const darkTextScheme = TextTheme();
+
 const darkColorScheme = ColorScheme(
-  background: Color(0xFF424242),
   brightness: Brightness.dark,
+  background: Colors.black,
+  onBackground: Colors.black87,
   error: Colors.red,
-  onBackground: Color(0xFF424242),
   onError: Colors.redAccent,
-  onPrimary: Colors.lightBlue,
-  onSecondary: Colors.lightBlueAccent,
-  onSurface: Colors.black26,
-  primary: Colors.lightBlue,
-  secondary: Colors.lightBlueAccent,
-  surface: Colors.black26,
+  primary: Colors.white,
+  onPrimary: Colors.white12,
+  secondary: Colors.white,
+  onSecondary: Colors.white12,
+  surface: Color.fromARGB(255, 245, 245, 245),
+  onSurface: Colors.white12,
 );
 
 const lightColorScheme = ColorScheme(
-  background: Colors.amber,
   brightness: Brightness.light,
-  error: Colors.red,
+  background: Colors.white,
   onBackground: Colors.black87,
+  error: Colors.red,
   onError: Colors.redAccent,
-  onPrimary: Colors.amber,
-  onSecondary: Colors.amberAccent,
-  onSurface: Colors.black12,
-  primary: Colors.amber,
-  secondary: Colors.amberAccent,
+  primary: Colors.black,
+  onPrimary: Colors.black,
+  secondary: Colors.black,
+  onSecondary: Colors.black,
   surface: Colors.black12,
+  onSurface: Colors.black12,
 );
 
-AppBarTheme appBarTheme = AppBarTheme(
+AppBarTheme darkAppBarTheme = AppBarTheme(
   backgroundColor: Colors.transparent,
+  titleTextStyle: TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+  ),
   elevation: 0,
   toolbarTextStyle: TextStylePath.title18w800,
   iconTheme: const IconThemeData(color: Colors.white),
+  actionsIconTheme: const IconThemeData(color: Colors.white),
+);
+
+AppBarTheme lightAppBarTheme = AppBarTheme(
+  backgroundColor: Colors.transparent,
+  titleTextStyle: TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.bold,
+    color: Colors.black,
+  ),
+  elevation: 0,
+  toolbarTextStyle: TextStylePath.title18w800,
+  iconTheme: const IconThemeData(color: Colors.black),
   actionsIconTheme: const IconThemeData(color: Colors.white),
 );

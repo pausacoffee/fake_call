@@ -16,6 +16,10 @@
     <!--Include only if your app benefits from VIBRATE access. -->
     <uses-permission android:name="android.permission.VIBRATE" />
 
+    <!--주소록-->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />  
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />  
+
    <application
         android:label="fake_call"
         android:name="${applicationName}"

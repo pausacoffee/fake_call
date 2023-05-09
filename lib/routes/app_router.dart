@@ -1,7 +1,9 @@
+import 'package:fake_call/views/contact/contact_picker_view.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 
 import '../global/global_error_page.dart';
+import '../views/call/add_call_view.dart';
 import '../views/home/home_view.dart';
 import '../views/permission/permission_view.dart';
 import '../views/settings/settings_view.dart';
@@ -27,30 +29,49 @@ class AppRouter {
         builder: (BuildContext context, GoRouterState state) {
           return const HomeView();
         },
-      ),
-      GoRoute(
-        path: APP_PAGE.setting.toPath,
-        name: APP_PAGE.setting.toName,
-        pageBuilder: (context, state) => CustomTransitionPage(
-          child: const SettingsView(),
-          transitionsBuilder: (context, animation, secondaryAnimation, child) {
-            const begin = Offset(1.0, 0.0);
-            const end = Offset.zero;
-            const curve = Curves.ease;
-
-            final tween = Tween(begin: begin, end: end);
-            final curvedAnimation =
-                CurvedAnimation(parent: animation, curve: curve);
-
-            return SlideTransition(
-              position: tween.animate(curvedAnimation),
-              child: FadeTransition(
-                opacity: animation,
-                child: child,
+        routes: <GoRoute>[
+          GoRoute(
+            path: APP_PAGE.addCall.toPath,
+            name: APP_PAGE.addCall.toName,
+            builder: (BuildContext context, GoRouterState state) {
+              return const AddCallView();
+            },
+            routes: <GoRoute>[
+              GoRoute(
+                path: APP_PAGE.addCantact.toPath,
+                name: APP_PAGE.addCantact.toName,
+                builder: (BuildContext context, GoRouterState state) {
+                  return const ContactPickerView();
+                },
               ),
-            );
-          },
-        ),
+            ],
+          ),
+          GoRoute(
+            path: APP_PAGE.setting.toPath,
+            name: APP_PAGE.setting.toName,
+            pageBuilder: (context, state) => CustomTransitionPage(
+              child: const SettingsView(),
+              transitionsBuilder:
+                  (context, animation, secondaryAnimation, child) {
+                const begin = Offset(1.0, 0.0);
+                const end = Offset.zero;
+                const curve = Curves.ease;
+
+                final tween = Tween(begin: begin, end: end);
+                final curvedAnimation =
+                    CurvedAnimation(parent: animation, curve: curve);
+
+                return SlideTransition(
+                  position: tween.animate(curvedAnimation),
+                  child: FadeTransition(
+                    opacity: animation,
+                    child: child,
+                  ),
+                );
+              },
+            ),
+          ),
+        ],
       ),
       GoRoute(
         path: APP_PAGE.splash.toPath,

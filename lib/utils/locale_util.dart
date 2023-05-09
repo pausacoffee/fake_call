@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const String LAN_CODE = 'lanCode';
-const String LAN_KOR = 'kr';
+const String LAN_KOR = 'ko';
 
 Future<Locale> setLocal(String lanCode) async {
   SharedPreferences _pref = await SharedPreferences.getInstance();
@@ -22,9 +22,9 @@ Future<Locale> getLocale() async {
 Locale _locale(String lanCode) {
   switch (lanCode) {
     case LAN_KOR:
-      return Locale(LAN_KOR, 'KO');
+      return Locale(LAN_KOR, 'KR');
     default:
-      return Locale(LAN_KOR, 'KO');
+      return Locale(LAN_KOR, 'KR');
   }
 }
 

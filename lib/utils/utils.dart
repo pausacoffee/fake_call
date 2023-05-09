@@ -138,4 +138,66 @@ String getUvMsg(double uv, BuildContext context) {
   return result;
 }
 
+List<String> getAlpabet(BuildContext context) {
+  List<String> labels = [];
+
+  switch (translation(context).localeName) {
+    case 'en':
+      labels = [
+        'A',
+        'B',
+        'C',
+        'D',
+        'E',
+        'F',
+        'G',
+        'H',
+        'I',
+        'J',
+        'K',
+        'L',
+        'M',
+        'N',
+        'O',
+        'P',
+        'Q',
+        'R',
+        'S',
+        'T',
+        'U',
+        'V',
+        'W',
+        'X',
+        'Y',
+        'Z'
+      ];
+      break;
+    case 'ko':
+      labels = [
+        'ㄱ',
+        'ㄲ',
+        'ㄴ',
+        'ㄷ',
+        'ㄸ',
+        'ㄹ',
+        'ㅁ',
+        'ㅂ',
+        'ㅃ',
+        'ㅅ',
+        'ㅆ',
+        'ㅇ',
+        'ㅈ',
+        'ㅉ',
+        'ㅊ',
+        'ㅋ',
+        'ㅌ',
+        'ㅍ',
+        'ㅎ'
+      ];
+      break;
+  }
+
+  return labels;
+}
+
 //  ▼ ========================================

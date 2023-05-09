@@ -51,6 +51,21 @@ class _SplashViewState extends State<SplashView> {
     );
   }
 
+  // Override ▼ ==========================================
+  @override
+  void initState() {
+    _appRefresh = Provider.of<AppRefresh>(context, listen: false);
+    onStartUp();
+
+    super.initState();
+  }
+
+  // Function ▼ ==========================================
+  ///appService init을 시작하고 완료되면  redirect됨.
+  void onStartUp() async {
+    await _appRefresh.onAppStart();
+  }
+
   Future<bool> handlePrevBack(BuildContext context) async {
     // 메인 화면에서 뒤로가기 막기
     final DateTime now = DateTime.now();
@@ -70,20 +85,5 @@ class _SplashViewState extends State<SplashView> {
     }
 
     return false;
-  }
-
-  // Override ▼ ==========================================
-  @override
-  void initState() {
-    _appRefresh = Provider.of<AppRefresh>(context, listen: false);
-    onStartUp();
-
-    super.initState();
-  }
-
-  // Override ▼ ==========================================
-  ///appService init을 시작하고 완료되면  redirect됨.
-  void onStartUp() async {
-    await _appRefresh.onAppStart();
   }
 }

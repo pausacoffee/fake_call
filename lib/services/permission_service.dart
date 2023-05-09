@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:go_router/go_router.dart';
 import 'package:logger/logger.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -106,6 +107,11 @@ class PermissionService {
     openAppSettings();
   }
 
+  /// 권한 재요청
+  Future<dynamic> handlePermissionReRequest() async {
+    openAppSettings();
+  }
+
   /// 권한 허용
   Future<dynamic> handlePermissionGranted() async {
     if (isPermissionSuccess) {
@@ -114,6 +120,27 @@ class PermissionService {
 
       ///call redirect in app router
       AppRefresh().permitted = true;
+    }
+  }
+
+  /// 연락처 접근 권한 요청
+  Future<bool> handlePermissionContacts() async {
+    if (await Permission.contacts.request().isGranted) {
+      return true;
+    } else {
+      if (await Permission.contacts.shouldShowRequestRationale) {
+        return true;
+      }
+      Fluttertoast.showToast(
+        msg: '연락처 접근을 허용해주세요.',
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.BOTTOM,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.black.withOpacity(0.7),
+        textColor: Colors.white,
+      );
+
+      return false;
     }
   }
 }
